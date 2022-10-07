@@ -31,6 +31,8 @@ public class Register implements Task {
                 Click.on(UtestRegisterForm.NEXT_LAST_STEP_BUTTON),
                 Enter.theValue("Admin12345*").into(UtestRegisterForm.CREATE_YOUR_UTEST_PASSWORD),
                 Enter.theValue("Admin12345*").into(UtestRegisterForm.CONFIRM_PASSWORD),
+                Click.on(UtestRegisterForm.CHECK_ACEPTAR_UNO),
+                Click.on(UtestRegisterForm.CHECK_ACEPTAR_DOS),
                 Click.on(UtestRegisterForm.COMPLETE_SETUP_BUTTON)
 
                 );
