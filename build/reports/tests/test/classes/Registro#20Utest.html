@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">32.823s</div>
+<div class="counter">0.644s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,77 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="scenario: Registrar un nuevo usuario en la pagina web"></a>
+<h3 class="failures">scenario: Registrar un nuevo usuario en la pagina web</h3>
+<span class="code">
+<pre>cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'co.com.choucair.utest.stepdefinitions.UtestStepDefinition.unUsuarioQuiereRegistrarseEnLaPaginaDeUtest() in file:/C:/Users/johan/IdeaProjects/co.com.choucair.utest/build/classes/java/test/' with pattern [^Un usuario quiere registrarse en la pagina de Utest(\d+)$] is declared with 0 parameters. However, the gherkin step has 1 arguments [4]. 
+Step text: Un usuario quiere registrarse en la pagina de Utest4
+	at cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:111)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:66)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)
+	at cucumber.api.TestStep.executeStep(TestStep.java:102)
+	at cucumber.api.TestStep.run(TestStep.java:83)
+	at cucumber.api.TestCase.run(TestCase.java:58)
+	at cucumber.runner.Runner.runPickle(Runner.java:80)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:118)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:56)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:127)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,80 +142,31 @@
 </tr>
 </thead>
 <tr>
-<td class="success">scenario: Registrar un nuevo usuario en la pagina web</td>
-<td class="success">32.823s</td>
-<td class="success">passed</td>
+<td class="failures">scenario: Registrar un nuevo usuario en la pagina web</td>
+<td class="failures">0.644s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6d1d4d7
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@59532566
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@63fdffcd
-oct 12, 2022 11:46:06 AM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized, goog:chromeOptions: {args: [--start-maximized], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 106.0.5249.61 (511755355844955cd3e264779baf0dd38212a4d0-refs/branch-heads/5249@{#569}) on port 8498
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-oct 12, 2022 11:46:10 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4ceff87d
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@53ce2392
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@33eb6758
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@51bddd98
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7fad214a
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1dad01fe
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@413bef78
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1536ea40
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@60743cdb
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4b8137c5
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5ff6dd3c
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@47b269c4
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@750ed637
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6dce59e
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@12219f6a
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5ef85555
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@66e21568
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@55acec99
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Scenario:Given Un usuario quiere registrarse en la pagina de Utest [Usuario open up [usuario opens the Utest page], Usuario register [usuario clicks on boton de registro, usuario enters 'FRANCY' into ingresar nombre, usuario enters 'ROJAS' into ingresar nombre, usuario enters 'FRANCYLROJAS@GMAIL.COM' into ingresar nombre, usuario select December on ingresar nombre, usuario select 28 on ingresar nombre, usuario select 1995 on ingresar nombre, usuario clicks on boton siguiente paso, usuario enters 'Cartagena de Indias' into localizacion del usuario, usuario enters '130003' into localizacion de codigo postal, usuario clicks on boton paso dos, usuario clicks on boton ultimo paso, usuario enters 'Admin12345*' into ingresar una contraseÃ±a, usuario enters 'Admin12345*' into confirmar la contraseÃ±a, usuario clicks on check aceptar, usuario clicks on check aceptar dos, usuario clicks on boton finalizar]]]
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Scenario:Given Un usuario quiere registrarse en la pagina de Utest4
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Scenario:Given Un usuario quiere registrarse en la pagina de Utest4]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Scenario:Given Un usuario quiere registrarse en la pagina de Utest4]
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Scenario
-----------------------------------------------------------------------------
+TEST FAILED WITH ERROR: Scenario
+---------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Given Un usuario quiere registrarse en la pagina de Utest4
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Arity mismatch: Step Definition 'co.com.choucair.utest.stepdefinitions.UtestStepDefinition.unUsuarioQuiereRegistrarseEnLaPaginaDeUtest() in file:/C:/Users/johan/IdeaProjects/co.com.choucair.utest/build/classes/java/test/' with pattern [^Un usuario quiere registrarse en la pagina de Utest(\d+)$] is declared with 0 parameters. However, the gherkin step has 1 arguments [4]. 
 </pre>
 </span>
 </div>
@@ -163,7 +178,7 @@ TEST PASSED: Scenario
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 12/10/2022 11:46:41 AM</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 12/10/2022 02:50:07 PM</p>
 </div>
 </div>
 </body>

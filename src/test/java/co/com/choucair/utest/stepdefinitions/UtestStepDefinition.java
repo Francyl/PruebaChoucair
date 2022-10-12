@@ -11,8 +11,8 @@ public class UtestStepDefinition {
     public void setStage () { OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^Un usuario quiere registrarse en la pagina de Utest$")
-    public void unUsuarioQuiereRegistrarseEnLaPaginaDeUtest() {
+    @Given("^Un usuario quiere registrarse en la pagina de Utest(\\d+)$")
+    public void unUsuarioQuiereRegistrarseEnLaPaginaDeUtest(int valor) {
         //OnStage.theActorCalled("usuario").wasAbleTo(OpenUp.thepage(), (Login.onThePage()));
         OnStage.theActorCalled("usuario").wasAbleTo(OpenUp.thepage(), (Register.onThePage()));
     }
